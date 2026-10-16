@@ -1,2 +1,6 @@
 /venv
 /clean_data.csv
+/data/processed
+/data/prediction.csv
+/models/*.pkl
+!metrics/scores.json
