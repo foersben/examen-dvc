@@ -4,3 +4,4 @@
 /data/prediction.csv
 /models/*.pkl
 !metrics/scores.json
+/data/raw/raw.csv
