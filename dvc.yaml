@@ -3,6 +3,7 @@ stages:
     cmd: python src/data/data_split.py
     deps:
       - data/raw/raw.csv
+      - params.yaml
       - src/data/data_split.py
     params:
       - split.test_size
@@ -28,6 +29,7 @@ stages:
     deps:
       - data/processed/X_train_scaled.csv
       - data/processed/y_train.csv
+      - params.yaml
       - src/models/grid_search.py
     params:
       - gridsearch.param_grid
@@ -54,5 +56,6 @@ stages:
     outs:
       - data/prediction.csv
     metrics:
-      - metrics/scores.json
+      - metrics/scores.json:
+        cache: false
 
